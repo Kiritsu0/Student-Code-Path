@@ -23,7 +23,9 @@ const Home = () => {
   return (
     <div className="bg-gray-900 text-white min-h-screen">
       {/* Hero Section (Always visible) */}
-      <section className="flex flex-col items-center justify-center h-screen text-center px-6">
+      <section className="flex flex-col items-center justify-center h-screen text-center px-6 bg-cover bg-center bg-no-repeat"
+       style={{ backgroundImage: 'url(/background.jpg)' }}
+      >
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,7 +34,7 @@ const Home = () => {
         >
           <span className="relative z-10">
             Start Your Programming Journey with
-            <span className="text-blue-500"> Student Code Path!</span>
+            <span className="text-blue-300"> Student Code Path!</span>
           </span>
         </motion.h1>
         <motion.p
@@ -52,7 +54,7 @@ const Home = () => {
             boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.5)",
           }}
           whileTap={{ scale: 0.95 }}
-          className="mt-6 px-6 py-3 bg-blue-500 text-gray-900 text-lg font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition"
+          className="mt-6 px-6 py-3 bg-white hover:bg-gray-200 text-gray-900 text-lg font-semibold rounded-lg shadow-lg"
         >
           Get Started
         </motion.button>
@@ -96,7 +98,7 @@ const Home = () => {
             <p className="text-lg">
               Without a clear goal, you’ll keep jumping between languages and
               frameworks without real progress. That’s why{" "}
-              <span className="text-blue-400 font-bold">Student Code Path</span>{" "}
+              <span className="text-blue-300 font-bold">Student Code Path</span>{" "}
               exists—to guide you with a structured plan, helping you learn the
               right things in the right order.
             </p>
@@ -128,10 +130,10 @@ const Home = () => {
               emoji: "🎯",
             },
             {
-              title: "Interactive Community",
-              desc: "Learn with others, ask questions, and grow together.",
-              emoji: "🔥",
-            },
+              title: "AI Coding Assistant",
+              desc: "Ask our AI bot anything about programming to make your coding journey smoother and easier.",
+              emoji: "🤖",
+            }
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -149,7 +151,7 @@ const Home = () => {
       </section>
 
       {/* Final Call to Action */}
-      <section ref={section3Ref} className="py-16 px-6 bg-blue-600 text-center">
+      <section ref={section3Ref} className="py-16 px-6 bg-blue-400 text-center">
         <h2 className="text-3xl font-bold">Start Learning Today!</h2>
         <p className="mt-4 text-lg max-w-2xl mx-auto">
           Don’t waste time guessing what to learn next. Follow a proven roadmap
@@ -164,7 +166,7 @@ const Home = () => {
             boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.5)",
           }}
           whileTap={{ scale: 0.95 }}
-          className="mt-6 px-6 py-3 bg-white text-blue-600 text-lg font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition"
+          className="mt-6 px-6 py-3 bg-white text-blue-400 text-lg font-semibold rounded-lg shadow-lg hover:bg-gray-200"
         >
           Get Your Learning Plan
         </motion.button>
