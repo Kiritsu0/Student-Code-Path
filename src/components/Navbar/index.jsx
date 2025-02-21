@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaMapSigns, FaCode, FaBriefcase, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
@@ -16,15 +17,15 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex gap-6 text-white text-lg">
-        <a className="flex items-center gap-2 cursor-pointer transition hover:scale-110">
+        <Link to="roadmap" className="flex items-center gap-2 cursor-pointer transition hover:scale-110">
           <FaMapSigns /> Roadmap
-        </a>
-        <a className="flex items-center gap-2 cursor-pointer transition hover:scale-110">
+        </Link>
+        <Link to="languages" className="flex items-center gap-2 cursor-pointer transition hover:scale-110">
           <FaCode /> Programming
-        </a>
-        <a className="flex items-center gap-2 cursor-pointer transition hover:scale-110">
+        </Link>
+        <Link to="career-domains" className="flex items-center gap-2 cursor-pointer transition hover:scale-110">
           <FaBriefcase /> Careers
-        </a>
+        </Link>
       </nav>
 
       {/* Mobile Menu Button */}
@@ -37,15 +38,15 @@ const Navbar = () => {
         <div
           className="fixed top-0 right-0 h-screen w-2/3 bg-black/80 p-6 flex flex-col items-center gap-6 text-white text-lg"
         >
-          <a className="flex items-center gap-2 transition">
+          <Link to="roadmaps" className="flex items-center gap-2 transition">
             <FaMapSigns /> Roadmap
-          </a>
-          <a className="flex items-center gap-2 transition">
+          </Link>
+          <Link to="languages" className="flex items-center gap-2 transition">
             <FaCode /> Programming
-          </a>
-          <a className="flex items-center gap-2 transition">
+          </Link>
+          <Link to="career-domains" className="flex items-center gap-2 transition">
             <FaBriefcase /> Careers
-          </a>
+          </Link>
         </div>
       )}
     </header>
