@@ -7,7 +7,7 @@ function Layout() {
   return (
     <div>
       <Navbar />
-      <main>
+      <main className='bg-gray-900'>
         <Outlet />
       </main>
       <Footer />
