@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaMapSigns, FaCode, FaBriefcase, FaBars } from "react-icons/fa";
+import { FaMapSigns, FaCode, FaBriefcase, FaBars, FaTools } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full backdrop-blur-lg bg-white/10 shadow-lg p-4 flex justify-between items-center z-50">
+    <header className="fixed top-0 left-0 w-full backdrop-blur-3xl bg-white/10 shadow-lg p-4 flex justify-between items-center z-50">
       {/* Logo */}
       <div
         className="text-2xl font-bold text-white"
@@ -25,6 +25,9 @@ const Navbar = () => {
         </Link>
         <Link to="career-domains" className="flex items-center gap-2 cursor-pointer transition hover:scale-110">
           <FaBriefcase /> Careers
+        </Link>
+        <Link to="resources" className="flex items-center gap-2 cursor-pointer transition hover:scale-110">
+          <FaTools /> Resources
         </Link>
       </nav>
 
@@ -46,6 +49,9 @@ const Navbar = () => {
           </Link>
           <Link to="career-domains" className="flex items-center gap-2 transition">
             <FaBriefcase /> Careers
+          </Link>
+          <Link to="Resources" className="flex items-center gap-2 transition">
+            <FaTools /> Resources
           </Link>
         </div>
       )}

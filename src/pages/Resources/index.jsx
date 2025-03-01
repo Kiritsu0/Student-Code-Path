@@ -11,20 +11,22 @@ const domains = [
             tool: "HTML & CSS",
             youtube: [
               {
-                title: "HTML & CSS Full Course",
-                url: "https://youtube.com/htmlcsscourse",
+                title: "HTML & CSS For Absolute Beginners",
+                url: "https://youtube.com/playlist?list=PL4-IK0AVhVjOJs_UjdQeyEZ_cmEV3uJvx&si=jDQs0AEb5EL_oKNr",
               },
               {
-                title: "CSS Flexbox & Grid Tutorial",
-                url: "https://youtube.com/cssflexgrid",
+                title: "CSS Flexbox Tutorial",
+                url: "https://youtu.be/u044iM9xsWU?si=HgYPrsU-nFlQy0P2",
               },
             ],
             documentation: [
               {
-                title: "MDN HTML Guide",
+                title: "MDN Web Docs - HTML",
                 url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
               },
-              { title: "CSS Tricks", url: "https://css-tricks.com/" },
+              { title: "MDN Web Docs - CSS",
+                url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+              },
             ],
           },
           {
@@ -65,8 +67,64 @@ const domains = [
       },
       {
         name: "Backend Development",
-        languages: [],
-        resources: [],
+        resources: [
+          {
+            tool: "ExpressJs",
+            youtube: [
+              {
+                title: "HTML & CSS For Absolute Beginners",
+                url: "https://youtube.com/playlist?list=PL4-IK0AVhVjOJs_UjdQeyEZ_cmEV3uJvx&si=jDQs0AEb5EL_oKNr",
+              },
+              {
+                title: "CSS Flexbox Tutorial",
+                url: "https://youtu.be/u044iM9xsWU?si=HgYPrsU-nFlQy0P2",
+              },
+            ],
+            documentation: [
+              {
+                title: "MDN Web Docs - HTML",
+                url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+              },
+              { title: "MDN Web Docs - CSS",
+                url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+              },
+            ],
+          },
+          {
+            tool: "MongoDB",
+            youtube: [
+              {
+                title: "JavaScript Crash Course",
+                url: "https://youtube.com/xyz",
+              },
+              {
+                title: "ES6 Features Explained",
+                url: "https://youtube.com/abc",
+              },
+            ],
+            documentation: [
+              {
+                title: "MDN JavaScript Guide",
+                url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+              },
+              { title: "JavaScript.info", url: "https://javascript.info/" },
+            ],
+          },
+          {
+            tool: "JWT",
+            youtube: [
+              { title: "React Basics", url: "https://youtube.com/reactbasics" },
+              {
+                title: "React Hooks Explained",
+                url: "https://youtube.com/reacthooks",
+              },
+            ],
+            documentation: [
+              { title: "React Official Docs", url: "https://react.dev/" },
+              { title: "React Patterns", url: "https://reactpatterns.com/" },
+            ],
+          },
+        ],
       },
     ],
   },
@@ -135,7 +193,7 @@ const Resources = () => {
                       {subdomain.resources.map((resource) => (
                         <div
                           key={resource.tool}
-                          className="bg-gray-200 dark:bg-gray-600 rounded-lg p-4"
+                          className="bg-gray-300 dark:bg-gray-600 rounded-lg p-4 border-l-4 border-blue-500"
                         >
                           <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
                             {resource.tool}
@@ -155,7 +213,7 @@ const Resources = () => {
                                         href={video.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-blue-500 hover:underline flex items-center gap-1"
+                                        className="text-blue-500 hover:underline inline-flex items-center gap-1"
                                       >
                                         <FaExternalLinkAlt className="text-xs" /> {video.title}
                                       </a>
@@ -178,7 +236,7 @@ const Resources = () => {
                                         href={doc.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-green-500 hover:underline flex items-center gap-1"
+                                        className="text-green-500 hover:underline inline-flex items-center gap-1"
                                       >
                                         <FaExternalLinkAlt className="text-xs" /> {doc.title}
                                       </a>
