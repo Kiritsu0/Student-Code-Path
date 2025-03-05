@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import CareerDomains from "./pages/CareerDomains";
 import Languages from "./pages/Languages";
@@ -8,7 +8,7 @@ import Layout from "./layout";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
@@ -18,7 +18,7 @@ function App() {
         <Route path="/resources" element={<Resources />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
