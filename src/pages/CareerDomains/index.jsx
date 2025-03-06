@@ -53,32 +53,43 @@ const CareerDomains = () => {
                     <h2 className="text-2xl font-bold text-gray-800 mb-2">
                       {sub.name}
                     </h2>
-                    <p className="text-gray-600 mb-2">{sub.description}</p>
+                    <p className="text-gray-600 mb-2 max-w-[120ch]">
+                      {sub.description}
+                    </p>
                     <p className="text-gray-500 text-sm mb-3">
                       Salary: {sub.salary}
                     </p>
-                    <Link
-                      to="/roadmaps"
-                      className="font-semibold text-blue-600 underline transition inline-flex items-center gap-1"
-                    >
-                      <FaArrowRight className="text-blue-500 text-sm transition-transform duration-200 group-hover:translate-x-1" />
-                      Complete Career Roadmap{" "}
-                    </Link>
-
+                    <div className="flex flex-col">
+                      <Link
+                        to="/roadmaps"
+                        className="font-semibold text-blue-600 underline transition inline-flex items-center gap-1"
+                      >
+                        <FaArrowRight className="text-blue-500 text-sm transition-transform duration-200 group-hover:translate-x-1" />
+                        Complete Career Roadmap{" "}
+                      </Link>
+                      <Link
+                        to="/resources"
+                        className="font-semibold text-blue-600 underline transition inline-flex items-center gap-1"
+                      >
+                        <FaArrowRight className="text-blue-500 text-sm transition-transform duration-200 group-hover:translate-x-1" />
+                        Career Resources{" "}
+                      </Link>
+                    </div>
                     {/* Programming Languages */}
                     <div className="mt-5">
                       <h3 className="text-lg font-semibold flex items-center gap-2">
                         <span className="text-blue-500 text-2xl">•</span>
                         Associated Programming Languages:
                       </h3>
-                      <div className="ml-5 mt-2 flex flex-wrap gap-3">
+                      <div className="ml-5 mt-2 flex flex-wrap gap-4">
                         {sub.languages.map((language, i) => (
                           <Link
                             to="/languages"
                             key={i}
-                            className="text-blue-600 font-medium"
+                            title={language[1]}
+                            className="flex items-center text-2xl gap-2 px-4 py-2 bg-gray-100 rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:bg-gray-200"
                           >
-                            {language}
+                            {language[0]}
                           </Link>
                         ))}
                       </div>

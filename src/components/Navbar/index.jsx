@@ -21,7 +21,7 @@ const Navbar = () => {
           <FaMapSigns /> Roadmap
         </Link>
         <Link to="languages" className="flex items-center gap-2 cursor-pointer transition hover:scale-110">
-          <FaCode /> Programming
+          <FaCode /> Languages
         </Link>
         <Link to="career-domains" className="flex items-center gap-2 cursor-pointer transition hover:scale-110">
           <FaBriefcase /> Careers
@@ -45,7 +45,7 @@ const Navbar = () => {
             <FaMapSigns /> Roadmap
           </Link>
           <Link to="languages" className="flex items-center gap-2 transition">
-            <FaCode /> Programming
+            <FaCode /> Languages
           </Link>
           <Link to="career-domains" className="flex items-center gap-2 transition">
             <FaBriefcase /> Careers

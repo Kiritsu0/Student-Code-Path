@@ -2,6 +2,7 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import "./style.css";
+import background from "../../assets/background.jpg";
 
 const Home = () => {
   // Refs for sections that should animate on scroll
@@ -24,7 +25,7 @@ const Home = () => {
     <div className="bg-gray-900 text-white min-h-screen">
       {/* Hero Section (Always visible) */}
       <section className="flex flex-col items-center justify-center h-screen text-center px-6 bg-cover bg-center bg-no-repeat"
-       style={{ backgroundImage: 'url(/background.jpg)' }}
+       style={{ backgroundImage: `url(${background})` }}
       >
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
