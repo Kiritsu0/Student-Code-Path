@@ -33,14 +33,20 @@ const domains = [
         description: `Frontend development is the process of creating the visual and interactive parts of a website or web application—the parts
            that users see and interact with directly. It involves designing the layout, styling elements, and adding interactive features that enhance the user experience
            When you visit a website, everything from buttons, menus, animations, forms, and images is handled by frontend development. The goal is to make websites look great, work smoothly, and be easy to use on different devices.`,
-        salary: "$60,000 - $120,000 per year",
+        salary: "$48,787",
         languages: [[<FaJs className="text-yellow-300" />, "Javascript"]],
       },
       {
         name: "Backend Development",
-        description:
-          "Handling server-side logic, databases, and API integrations using Node.js, Python, Ruby, and Java.",
-        salary: "$70,000 - $130,000 per year",
+        description: `The backend is the part of a website or app that works behind the scenes to handle data, 
+          logic, and communication between the user and the server. Think of it as the “brain” of a website—it 
+          processes requests, manages databases, and ensures everything runs smoothly. 
+          For example, when you log into a website, the backend checks your username and password, 
+          retrieves your account details, and sends them to the frontend (the part you see and interact with). 
+          It’s responsible for things like storing user data, handling payments, and making sure information is secure. 
+          Backend development typically uses languages like Node.js, Python, Java, or PHP and 
+          works with databases like MySQL, PostgreSQL, or MongoDB to store and manage information.`,
+        salary: "$67,227",
         languages: [
           [<FaNode className="text-3xl text-green-600" />, "Nodejs"],
           [<FaPython className="text-yellow-500" title="Python" />, "Python"],

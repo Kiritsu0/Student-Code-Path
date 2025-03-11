@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Roadmaps() {
-  return (
-    <div>Roadmaps</div>
-  )
+  return <div>Roadmaps</div>;
 }
 
-export default Roadmaps
+export default Roadmaps;

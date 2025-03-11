@@ -57,9 +57,12 @@ const CareerDomains = () => {
                       {sub.description}
                     </p>
                     <p className="text-gray-500 text-sm mb-3">
-                      Salary: {sub.salary}
+                      <span className="font-bold text-gray-800">
+                        Global median salary:
+                      </span>{" "}
+                      {sub.salary} per year
                     </p>
-                    <div className="flex flex-col">
+                    <div className="inline-flex flex-col">
                       <Link
                         to="/roadmaps"
                         className="font-semibold text-blue-600 underline transition inline-flex items-center gap-1"
